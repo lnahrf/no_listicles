@@ -1,4 +1,6 @@
 export const BLACKLIST = [
+    "course",
+    "courses",
     "lesson",
     "lessons",
     "image",
