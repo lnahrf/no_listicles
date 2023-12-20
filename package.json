@@ -1,0 +1,22 @@
+{
+    "name": "no_listicles",
+    "version": "0.1",
+    "author": "lnahrf",
+    "license": "MIT",
+    "description": "Chrome add-on that removes listicles from your DEV.TO feed",
+    "scripts": {
+      "build": "node ./scripts/minify.js"
+    },
+    "devDependencies": {
+        "uglify-js": "^3.17.4"
+    },
+    "prettier": {
+        "semi": true,
+        "arrowParens": "avoid",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "bracketSpacing": true,
+        "trailingComma": "none",
+        "printWidth": 120
+    }
+}

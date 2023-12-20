@@ -1,0 +1,22 @@
+html{
+    border-radius: 5px;
+}
+#root{
+    max-height:180px;
+    overflow: auto;
+}
+ul{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li{
+    list-style-type: none;
+    background-color: #ebebeb;
+    padding: 5px;
+    margin-bottom:3px;
+    border-radius:5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
