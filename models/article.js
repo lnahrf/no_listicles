@@ -22,6 +22,5 @@ export class Article {
     removeFromDOM(){
         this.node.parentNode?.removeChild(this.node);
         this.removed = true;
-        console.log("R =>", this.title);
     }
 }
