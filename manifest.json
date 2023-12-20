@@ -6,7 +6,7 @@
     "permissions": ["scripting", "activeTab"],
     "action": {
         "default_popup": "popup/index.html",
-        "default_icon": "popup/placeholder_icon.png"
+        "default_icon": "popup/no_listicles_icon.png"
     },
     "content_scripts": [
         {
