@@ -10,7 +10,7 @@ This add-on was made out of need. It uses a completely arbitrary scoring system 
 #### It is not perfect - but it works
 From time to time an article that is not a listicle might get caught in the mix and removed from the feed.
 The scoring system is partially built upon a blacklist of words associated with listicle-type articles.
-My goal with the blacklist was to try and keep things leveled, and not over-do it.
+My goal with the blacklist was to try and keep things levelled, and not overdo it.
 You are more than welcome to improve the blacklist as you see fit, either in this repository or in your own fork/clone.
 
 The blacklist is located in `enums/blacklist.js`.
