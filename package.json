@@ -3,11 +3,14 @@
     "version": "0.1",
     "author": "lnahrf",
     "license": "MIT",
+    "type": "module",
     "description": "Chrome add-on that removes listicles from your DEV.TO feed",
     "scripts": {
-      "build": "node ./scripts/minify.js"
+        "build": "node ./scripts/minify.js",
+        "test": "mocha"
     },
     "devDependencies": {
+        "mocha": "^10.2.0",
         "uglify-js": "^3.17.4"
     },
     "prettier": {
