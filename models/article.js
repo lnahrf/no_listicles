@@ -1,4 +1,4 @@
-import { generateScore } from "../modules/score";
+import { generateScore } from '../modules/score.js';
 
 export class Article {
     static removalThreshold = 50;

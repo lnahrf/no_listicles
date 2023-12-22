@@ -1,15 +1,14 @@
-const fs = require('fs');
-const uglifyjs = require('uglify-js');
-const files = [
-    './enums/blacklist.js',
-    './models/state.js',
-    './models/article.js',
-    './modules/index.js',
-    './modules/identify.js',
-    './modules/parser.js',
-    './modules/score.js',
-    
-].map(file =>
+import * as path from 'path';
+import * as fs from 'fs';
+import * as uglifyjs from 'uglify-js';
+
+const dirs = ['models', 'modules']
+
+const filePaths = dirs.flatMap((dir) => {
+    return fs.readdirSync(dir).map((fileName) => path.join(dir, fileName))
+})
+
+const files = filePaths.map(file =>
     fs
         .readFileSync(file, 'utf8')
         .split('\n')
