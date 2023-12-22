@@ -1,33 +1,20 @@
 {
     "manifest_version": 3,
     "name": "No Listicles!",
-    "description": "Chrome add-on that removes listicles from your DEV.TO feed",
+    "description": "Browser add-on that removes listicles from your DEV.TO feed",
     "version": "0.1",
     "permissions": ["scripting", "activeTab"],
     "action": {
         "default_popup": "popup/index.html",
         "default_icon": "popup/no_listicles_icon.png"
     },
+    "runtime_allowed_hosts": ["https://*.dev.to/*"],
+    "runtime_blocked_hosts": ["*://*/*"],
     "content_scripts": [
         {
             "matches": ["https://*.dev.to/*"],
             "run_at": "document_end",
-            "js": [
-                "./build/no_listicles.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "matches": ["https://*.dev.to/*"],
-            "resources": [
-                "enums/blacklist.js",
-                "modules/identify.js",
-                "modules/parser.js",
-                "modules/score.js",
-                "models/state.js",
-                "models/article.js"
-            ]
+            "js": ["./build/no_listicles.js"]
         }
     ]
 }

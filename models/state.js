@@ -16,15 +16,12 @@ export class State {
     }
 
     processMany(articles) {
-        if(!this.on) return;
+        if (!this.on) return;
         for (const article of articles) {
-            article.populateScore();
-
             if (article.shouldRemove()) {
                 article.removeFromDOM();
                 this.removed.add(article.title);
             }
-
             this.processed.push(article);
         }
     }

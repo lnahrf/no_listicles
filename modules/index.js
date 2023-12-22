@@ -5,6 +5,8 @@ import { observeDOM } from './parser.js';
     const state = new State();
     observeDOM(state);
     if (chrome?.runtime) {
-        chrome.runtime.onMessage.addListener((_, __, reply) => reply(Array.from(state.removed)));
+        chrome.runtime.onMessage.addListener((_, __, reply) =>
+            reply({ domUrl: window.location.href, removed: Array.from(state.removed) })
+        );
     }
 })();
